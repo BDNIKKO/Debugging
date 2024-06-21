@@ -1,18 +1,18 @@
 const storeOwners = [
   {
-    name: 'Danny Shavez',
+    name: 'Charles',
     stores: 1,
     location: "AZ",
   },
   {
-    name: 'Danny Shavez',
+    name: 'Sally',
     stores: 1,
-    location: "NM",
+    location: "NJ",
   },
   {
-    name: 'Danny Shavez',
+    name: 'Cassandra',
     stores: 1,
-    location: "NM",
+    location: "DE",
   },
   {
     name: 'Danny Shavez',
@@ -35,10 +35,7 @@ let locations = listNumberOfStores();
 
 
 function tellMeMyStores() {
-  console.log('Hey, can you tell me how many stores you have?');
-  if (locations > 0) {
-    console.log(`Of course, we have ${locations} stores`);
-  }
+  console.log('Hey, can you tell me who owns stores?');
 }
 
 
@@ -46,7 +43,12 @@ function hasStore() {
   for (let i = 0; i < storeOwners.length; i++) {
     let person = storeOwners[i].name; 
     let location = storeOwners[i].location; 
-    console.log(`Yes, ${person} has one in ${location}`); 
+
+    if (person === 'Danny Shavez' && location === 'NM') {
+      console.log(`Yes, ${person} that lives in NM owns one too.`);
+    } else {
+      console.log(`Yes, ${person} has one`);
+    }
   }
 }
 

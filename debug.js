@@ -23,7 +23,6 @@ const storeOwners = [
 
 // Define a function to count the total number of stores owned by all store owners.
 const listNumberOfStores = function () {
-const listNumberOfStores = function () 
   let totalLocations = 0; 
   for (let i = 0; i < storeOwners.length; i++) {  // Loop through each store owner
     totalLocations += storeOwners[i].stores; // Add the number of stores owned by the current owner to the total

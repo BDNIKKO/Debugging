@@ -21,16 +21,17 @@ const storeOwners = [
   },
 ];
 
-
+// Define a function to count the total number of stores owned by all store owners.
 const listNumberOfStores = function () {
+const listNumberOfStores = function () 
   let totalLocations = 0; 
-  for (let i = 0; i < storeOwners.length; i++) {
-    totalLocations += storeOwners[i].stores; 
+  for (let i = 0; i < storeOwners.length; i++) {  // Loop through each store owner
+    totalLocations += storeOwners[i].stores; // Add the number of stores owned by the current owner to the total
   }
   return totalLocations; 
 };
 
-
+// Call the function and store the result in the variable 'locations'.
 let locations = listNumberOfStores();
 
 
@@ -41,10 +42,10 @@ function tellMeMyStores() {
 
 function hasStore() {
   for (let i = 0; i < storeOwners.length; i++) {
-    let person = storeOwners[i].name; 
+    let person = storeOwners[i].name; // Get the name of the current store owner
     let location = storeOwners[i].location; 
 
-    if (person === 'Danny Shavez' && location === 'NM') {
+    if (person === 'Danny Shavez' && location === 'NM') { // Check if the current owner is Danny Shavez and located in NM
       console.log(`Yes, ${person} that lives in NM owns one too.`);
     } else {
       console.log(`Yes, ${person} has one`);
